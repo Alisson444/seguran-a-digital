@@ -2,16 +2,16 @@
 
 :root {
     --branco: white;
-    --cor-de-fundo: #0D0D1A; 
-    --fundo-senha: #1F1F3A;  
-    --fundo-texto: #181A3C;
-    --borda: #00FFEF; 
+    --cor-de-fundo: #0D0D1A; /* Darker background to enhance neon colors */
+    --fundo-senha: #1F1F3A;  /* Darker but with a cool tone */
+    --fundo-texto: #181A3C;  /* Dark background for text input */
+    --borda: #00FFFF; /* Neon cyan */
     --roboto: 'Roboto', sans-serif;
     --roboto-mono: 'Roboto Mono', monospace;
-    --neon-verde: #39FF14; 
-    --neon-rosa: #FF007F;  
-    --neon-azul: #00FFFF;  
-    --neon-amarelo: #FFFF00; 
+    --neon-verde: #39FF14; /* Neon green */
+    --neon-rosa: #FF007F;  /* Neon pink */
+    --neon-azul: #00FFFF;  /* Neon cyan */
+    --neon-amarelo: #FFFF00; /* Neon yellow */
 }
 
 * {
@@ -46,3 +46,131 @@ body {
     margin-top: 80px;
     background: var(--fundo-senha);
     padding: 24px;
+    border-bottom: 6px solid var(--borda);
+    box-shadow: 0 0 15px var(--neon-verde);
+}
+
+#campo-senha {
+    background-color: var(--fundo-senha);
+    border: none;
+    color: var(--branco);
+    font-family: var(--roboto-mono);
+    font-size: 40px;
+    width: 70%;
+    text-align: center;
+    box-shadow: 0 0 10px var(--neon-azul);
+}
+
+#campo-senha:focus {
+    outline: none;
+    box-shadow: 0 0 15px var(--neon-verde);
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.parametro {
+    background-color: var(--fundo-texto);
+    border: 2px solid var(--borda);
+    margin-top: 32px;
+    padding: 24px;
+    box-shadow: 0 0 10px var(--neon-rosa);
+}
+
+.parametro-titulo {
+    font-family: var(--roboto-mono);
+    font-size: 28px;
+    color: var(--neon-azul);
+    text-shadow: 0 0 8px var(--neon-azul), 0 0 16px var(--neon-azul);
+}
+
+.parametro-senha__titulo {
+    font-size: 24px;
+    color: var(--neon-rosa);
+}
+
+.parametro-coluna__senha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parametro-senha {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.parametro-senha-botoes {
+    display: flex;
+    justify-content: center;
+}
+
+.parametro-senha__botao {
+    background-color: var(--fundo-texto);
+    color: var(--branco);
+    border: 2px solid var(--borda);
+    padding: 24px;
+    font-size: 24px;
+    cursor: pointer;
+    text-shadow: 0 0 5px var(--neon-amarelo);
+}
+
+.parametro-senha__texto {
+    padding: 24px;
+    border-top: 2px solid var(--borda);
+    border-bottom: 2px solid var(--borda);
+    margin: 0;
+    font-size: 24px;
+}
+
+label {
+    font-size: 20px;
+    color: var(--neon-azul);
+    text-shadow: 0 0 5px var(--neon-azul);
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.barra {
+    background-color: var(--fundo-senha);
+    height: 30px;
+    width: 100%;
+}
+
+.forca {
+    height: 30px;
+    position: relative;
+    bottom: 30px;
+}
+
+.fraca {
+    width: 25%;
+    background-color: var(--neon-rosa);
+}
+
+.media {
+    background-color: var(--neon-amarelo);
+    width: 50%;
+}
+
+.forte {
+    background-color: var(--neon-verde);
+    width: 100%;
+}
+
+.parametro-senha-textos {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha {
+        flex-direction: row;
+    }
+}
